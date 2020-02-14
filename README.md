@@ -31,3 +31,11 @@ This is developed using CodeIgniter.
   ------------------------------------------------
   </pre>
 </p>
+
+## NOTE #
+Change following variable accordingly
+# server
+API_LOG_PATH
+# client
+API_URL
+$config['base_url']
