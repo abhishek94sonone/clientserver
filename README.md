@@ -31,6 +31,16 @@ This is developed using CodeIgniter.
   ------------------------------------------------
   </pre>
 </p>
+<h4>Following is the process</h4>
+<ol>
+  <li>SERVER is configured using SERVER Setup step. This is API based Server.</li>
+  <li>Creating the database and configuring on SEREVER. And follow the SERVER SETUP step to create table on database.</li>
+  <li>On server values are pushed in queue that means in values are stored in table so that afterwards file gets updated from queue.</li>
+  <li>To update file you need to setup cronjob by following the Uploading data to file section</li>
+  <li>SERVER constant variable is change according to requirement.</li>
+  <li>CLIENT is interface. CLIENT's base_url and constant variable are changed accordingly.</li>
+  <li>There is form on Client side through which you can push and pop values to queue</li>
+</ol>
 
 # # NOTE # #
 Change following variable accordingly
