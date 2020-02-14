@@ -23,12 +23,12 @@ class UpdateFile extends CI_Controller {
 	    		foreach ($to_update as $key => $value) {
 	    			$ar[] = $value['id'];
 	    		}
-	    		// echo "following ids updated ".implode(', ', $ar);
+	    		echo "following ids updated ".implode(', ', $ar);
 	    	}else{
-	    		// echo "nothing to update";
+	    		echo "nothing to update";
 	    	}
 	    }else{
-	    	// echo "nothing to update";
+	    	echo "nothing to update";
 	    }
 	}
 
