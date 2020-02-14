@@ -32,7 +32,7 @@ This is developed using CodeIgniter.
   </pre>
 </p>
 
-## NOTE #
+# # NOTE # #
 Change following variable accordingly
 # server
 API_LOG_PATH
