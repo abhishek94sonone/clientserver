@@ -5,7 +5,8 @@
 }
 
 body, html{
-  background:#9c27b0;
+  background:#278ab0;
+  /*background:#9c27b0;*/
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -42,7 +43,8 @@ body, html{
 
 .two{
   top:0px;
-  background:#ffc107;
+  background:#ff7907;
+  /*background:#ffc107;*/
 }
 
 .two h3{
@@ -79,7 +81,8 @@ input[type='text']{
   margin-bottom:20px;
   padding-bottom:-80px;
   border:none;
-  border-bottom:3px solid #ffc107;
+  border-bottom:3px solid #ff7907;
+  /*border-bottom:3px solid #ffc107;*/
   overflow:auto;
   position:relative;
 }
@@ -128,7 +131,8 @@ input[type='text']:active:focus::-webkit-input-placeholder
 
 .one  .btn{
   width:85%;
-  background:#ffc107;
+  background:#ff7907;
+  /*background:#ffc107;*/
   padding:15px;
   border:none;
   border-radius:5px;
