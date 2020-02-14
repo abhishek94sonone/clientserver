@@ -45,10 +45,10 @@ This is developed using CodeIgniter.
 # # NOTE # #
 Change following variable accordingly
 
-# server
+<h3>server</h3>
 <ul><li>API_LOG_PATH</li></ul>
 
-# client
+<h3>client</h3>
 <ul>
   <li>API_URL</li>
   <li>$config['base_url']</li>
