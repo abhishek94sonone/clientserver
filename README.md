@@ -35,7 +35,9 @@ This is developed using CodeIgniter.
 # # NOTE # #
 Change following variable accordingly
 # server
-API_LOG_PATH
+<ul><li>API_LOG_PATH</li></ul>
 # client
-API_URL
-$config['base_url']
+<ul>
+  <li>API_URL</li>
+  <li>$config['base_url']</li>
+</ul>
