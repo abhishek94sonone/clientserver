@@ -34,8 +34,10 @@ This is developed using CodeIgniter.
 
 # # NOTE # #
 Change following variable accordingly
+
 # server
 <ul><li>API_LOG_PATH</li></ul>
+
 # client
 <ul>
   <li>API_URL</li>
