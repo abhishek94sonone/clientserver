@@ -38,7 +38,7 @@ This is developed using CodeIgniter.
   <li>On server values are pushed in queue that means in values are stored in table so that afterwards file gets updated from queue.</li>
   <li>To update file you need to setup cronjob by following the Uploading data to file section</li>
   <li>SERVER constant variable is change according to requirement.</li>
-  <li>CLIENT is interface. CLIENT's base_url and constant variable are changed accordingly.</li>
+  <li>CLIENT is interface. CLIENT's constant variable is changed accordingly.</li>
   <li>There is form on Client side through which you can push and pop values to queue</li>
 </ol>
 
@@ -51,5 +51,4 @@ Change following variable accordingly
 <h3>client</h3>
 <ul>
   <li>API_URL</li>
-  <li>$config['base_url']</li>
 </ul>
