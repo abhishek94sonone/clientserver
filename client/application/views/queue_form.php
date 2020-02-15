@@ -11,13 +11,16 @@
 
 </head>
 <body>
+  <script type="text/javascript">
+  const API_URL = "<?php echo API_URL;?>";
+  </script>
 <section class="container">
  <section class="one">
   <h2 class="heading">
     Enter text to queue
   </h2>
   <form method="post" action="<?php echo base_url();?>index.php/ClientController/push">
-    <input type='text' placeholder="enter text" value="<?php echo set_value('queue_val'); ?>" name="queue_val" required><br/>
+    <input id="queue_val" type='text' placeholder="enter text" value="<?php echo set_value('queue_val'); ?>" name="queue_val" required><br/>
   	<?php echo form_error('queue_val'); ?>
     <button class="btn" role="button" type="submit">
       Push
@@ -29,9 +32,20 @@
       Pop
     </button>
   </form>
+  <br>
+  <hr>
+    <div>
+    <button class="btn" id="async_push" role="button" type="submit">
+      Push(Async)
+    </button>
+    </div>
+  <br>
+    <button class="btn" id="async_pop" role="button" type="submit">
+      Pop(Async)
+    </button>
   </section>
   <section class="two" style="<?php echo ($message!=''|| $popmessage!=''|| $error!='')? 'display: block':'display: none'; ?>">
-    <h3>
+    <h3 id="pop_val">
     <?php 
     if($error!=""){
     	echo "Something went wrong. <br>".$error;
