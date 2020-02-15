@@ -27,6 +27,7 @@ $('.two .close').on('click',function(){
         method:"post",
         data:{'queue_val':queue_val},
         dataType:'json',
+        timeeout:30000,
         success: function(data){
           console.log(data)
           toastr.success(' "'+queue_val+'" queued on server with generated id '+data.id, 'Success')
@@ -45,6 +46,7 @@ $('.two .close').on('click',function(){
         url:API_URL+"pop",
         method:"get",
         dataType:'json',
+        timeeout:30000,
         success: function(data){
           // console.log(data)
           $("#pop_val").text(data.message);

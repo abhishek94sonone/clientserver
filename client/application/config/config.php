@@ -23,7 +23,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://192.168.0.147:8080/clientServerFileUpload/client/';
+$paths = explode('/',str_replace('\\','/', $_SERVER["SCRIPT_NAME"]));
+$pathroot = $_SERVER["DOCUMENT_ROOT"];
+$concatpath = '';
+$temp_doc_root = array();
+$temp_dir = explode(DIRECTORY_SEPARATOR, __DIR__);
+$exclude_dir = array('application', 'config');
+$found = 0;
+$base_url = '';
+
+foreach ($temp_dir as $key => $value)
+{
+if(!in_array($value, $exclude_dir)) $temp_doc_root[] = $value;
+}
+
+$doc_root = implode(DIRECTORY_SEPARATOR, $temp_doc_root);
+
+foreach($paths as $tmppath)
+{
+if (empty($tmppath)) continue;
+$concatpath .= '/'.$tmppath;
+if ($doc_root == @realpath($pathroot.$concatpath))
+{
+$tmp3=$concatpath;
+$found=1;
+break;
+}
+}
+
+if ($found)
+{
+$base_url = 'http'.(((empty($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != 'on') && (empty($_SERVER["SERVER_PORT"]) || $_SERVER["SERVER_PORT"] != 443)) ? '' : 's').'://'.$_SERVER["SERVER_NAME"].((empty($_SERVER["SERVER_PORT"]) || $_SERVER["SERVER_PORT"] == 80 || $_SERVER["SERVER_PORT"] == 443) ? '' : ':'.$_SERVER["SERVER_PORT"]).($tmp3?(preg_match('/^\//',$tmp3) ? '' : '/').$tmp3:'');
+}
+
+$config['base_url'] = $base_url;
+// $config['base_url'] = 'http://192.168.0.147:8080/clientServerFileUpload/client/';
 
 /*
 |--------------------------------------------------------------------------
